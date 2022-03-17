@@ -2,11 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Dashboard from './dashboard';
+import Table from './table';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <div className='container'>
     <Dashboard />
+    <Table />
+    </div>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
