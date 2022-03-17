@@ -1,5 +1,5 @@
-import './balance.css';
-function Table() {
+import './dashboard.css';
+function Dashboard() {
     return (
     <div className="table" >
       <h2>Santiago Bank</h2>
@@ -23,5 +23,5 @@ function Table() {
     
 }
 
-export default Table;
+export default Dashboard;
 
