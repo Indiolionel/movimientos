@@ -1,14 +1,14 @@
 import './dashboard.css';
-function Dashboard() {
+function Dashboard({balance}) {
     return (
-      <div className='container-dashboard'>
     <div className="dashboard" >
+      <div className='container-dashboard'>
       <h2>Santiago Bank</h2>
       <div className="balance">
           <h5>BALANCE</h5>
           <div className='precio'>
           <p>$</p>
-          <p>155.100.000</p>
+          <p>{balance}</p>
           </div>
           
 
@@ -16,7 +16,7 @@ function Dashboard() {
       <button>
         Nuevo Movimiento
       </button>
-    </div>
+      </div>
     </div>
     
     

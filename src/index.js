@@ -4,11 +4,12 @@ import './index.css';
 import Dashboard from './dashboard';
 import Table from './table';
 import reportWebVitals from './reportWebVitals';
+import data from './data.js'
 
 ReactDOM.render(
   <React.StrictMode>
     <div className='container'>
-    <Dashboard />
+    <Dashboard balance={data.balance}/>
     <Table />
     </div>
     

@@ -16,7 +16,7 @@ code {
 
 .container {
   width: 80%;
-  background-color: rgb(192, 148, 112);
+  height: 100vh;
   display: flex;
   flex-direction: row;
   padding: 20px;

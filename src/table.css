@@ -1,7 +1,8 @@
  .table {
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 100%;
+        margin: 4px;
        }
 
     #table2 {
@@ -16,6 +17,7 @@
         flex-direction: row;
         justify-content: space-between;
         width: 90%;
+        height: 40px;
         padding: 0px;
     }
 
@@ -25,10 +27,14 @@ table tbody tr:nth-child(2n+1)
 }
 
 .container-table {
-    background-color: rgb(202, 193, 193);
+    background-color: rgb(202, 193, 193,0.2);
     width: 50%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    margin: 5px;
+    margin: 4px;
+}
+
+h3 {
+    text-align: center;
 }

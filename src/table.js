@@ -5,7 +5,7 @@ function Table() {
       <div className='table'>
           <table>
               <tr>
-                  <th>Ultimos movimientos!</th>
+                  <h3>Ultimos movimientos!</h3>
               </tr>
               
    
