@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Dashboard from './dashboard';
-import Table from './table';
 import reportWebVitals from './reportWebVitals';
 import data from './data.js'
+import App from './app'
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className='container'>
-    <Dashboard balance={data.balance}/>
-    <Table />
-    </div>
+    <App data={data}/>
     
   </React.StrictMode>,
   document.getElementById('root')

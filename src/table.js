@@ -1,41 +1,32 @@
+import { Fragment } from 'react';
 import './table.css';
-function Table() {
+
+function Table({items}) {
+
+  
+  
+  const listItems = items.map(a =>{
+    const changeColor = a.amount>0 ? 'green' : 'red' ; 
+
+      return (
+      <tr className={`atributte ${changeColor}`} key={a.description}>
+      <td>{a.description}</td>
+      <td>{a.amount}</td>
+      </tr> 
+      )
+  }    
+);
+
+
+
     return (
       <div className='container-table'>
       <div className='table'>
-          <table>
-              <tr>
-                  <h3>Ultimos movimientos!</h3>
-              </tr>
-              
-   
-      <table id="table2">
-          <tbody>
-        <tr className='atributte'>
-          <td>Gas</td>
-          <td>-1500</td>
-        </tr>
-        <tr className='atributte'>
-          <td>Club</td>
-          <td>-4500</td>
-        </tr>
-        <tr className='atributte'>
-          <td>Luz</td>
-          <td>-1000</td>
-        </tr>
-        <tr className='atributte'>
-          <td>Sueldo</td>
-          <td>75000</td>
-        </tr>
-        <tr className='atributte'>
-          <td>School Music</td>
-          <td>-4000</td>
-        </tr>
-        </tbody>
-      </table>
-    
-      
-          </table>
+      <h3>Ultimos movimientos!</h3>
+          <table >
+              {listItems}
+         
+          </table> 
       </div>
       </div>
     

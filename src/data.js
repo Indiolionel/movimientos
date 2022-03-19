@@ -1,5 +1,5 @@
 export default {
-    "balance": 100900000,
+    "balance": 150000,
     "items" : [
     {
     "description": "Compra de almacén",
@@ -7,7 +7,7 @@ export default {
     },
     {
     "description": "Sueldo",
-    "amount": 500000000
+    "amount": 50000
     },
     {
     "description": "Gas",
@@ -23,7 +23,7 @@ export default {
     },
     {
     "description": "Sueldo",
-    "amount": 500000000
+    "amount": 50000
     },
     {
     "description": "Gas",
@@ -40,6 +40,14 @@ export default {
     {
     "description": "Luz",
     "amount": -2500
-    }
+    },
+    {
+        "description": "Club de remo",
+        "amount": -4850
+        },
+        {
+            "description": "Asignacion Hijo",
+            "amount": 4600
+            }
     ]
     }

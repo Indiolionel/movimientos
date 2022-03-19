@@ -1,5 +1,5 @@
 import './dashboard.css';
-function Dashboard({balance}) {
+function Dashboard({balance, onclick}) {
     return (
     <div className="dashboard" >
       <div className='container-dashboard'>
@@ -13,7 +13,7 @@ function Dashboard({balance}) {
           
 
       </div>
-      <button>
+      <button onClick={()=>onclick(true)}>
         Nuevo Movimiento
       </button>
       </div>

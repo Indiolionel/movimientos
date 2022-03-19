@@ -21,9 +21,17 @@
         padding: 0px;
     }
 
-table tbody tr:nth-child(2n+1)
+.atributte:nth-child(2n+1)
 { 
     background-color: #CDC6F8;
+}
+
+.green {
+    color:green;
+}
+
+.red {
+    color: red;
 }
 
 .container-table {
