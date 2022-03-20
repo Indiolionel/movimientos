@@ -13,6 +13,7 @@ function App({data}) {
         <>
         
         <div className='container'>
+            
         <Dashboard balance={data.balance} onclick={setshowModal}/>
         {showModal ? <Modal /> : null}
 

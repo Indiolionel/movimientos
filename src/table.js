@@ -22,7 +22,7 @@ function Table({items}) {
     return (
       <div className='container-table'>
       <div className='table'>
-      <h3>Ultimos movimientos!</h3>
+      <h3>Last movements!</h3>
           <table >
               {listItems}
          

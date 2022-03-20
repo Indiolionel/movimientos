@@ -14,7 +14,7 @@ function Dashboard({balance, onclick}) {
 
       </div>
       <button onClick={()=>onclick(true)}>
-        Nuevo Movimiento
+        New Move
       </button>
       </div>
     </div>

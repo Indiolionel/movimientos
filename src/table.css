@@ -4,12 +4,12 @@
         width: 100%;
         margin: 4px;
        }
-
+/* 
     #table2 {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-    }
+    } */
 
     .atributte {
         background-color: #fff;
@@ -19,6 +19,7 @@
         width: 90%;
         height: 40px;
         padding: 0px;
+        /* margin: 10px; */
     }
 
 .atributte:nth-child(2n+1)
