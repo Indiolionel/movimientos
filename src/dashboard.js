@@ -13,7 +13,7 @@ function Dashboard({balance, onclick}) {
           
 
       </div>
-      <button onClick={()=>onclick(true)}>
+      <button className='button-new-move' onClick={()=>onclick(true)}>
         New Move
       </button>
       </div>

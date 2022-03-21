@@ -1,30 +1,65 @@
 form {
-    width: 300px;
-    height: 300px;
-    background-color: rgb(58, 55, 55,0.5);
+    width: 400px;
+    height: 250px;
+    background-color: rgba(245, 240, 240);
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.container-title {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    width: 95%;
+    position: relative;
+    margin-top: -30px;
+}
+
+.label-input {
+    width: 250px;
+}
+
+.label-input  input {
+    height: 25px;
+}
+
+.container-title h4 {
+    font-weight: 400;
+    font-size: 14px;
+}
+
 
 label {
     margin: 10px;
+    display: flex;
+    flex-direction: column;
 }
 input {
-    border: 2px solid rgb(8, 8, 8);
-    background-color: aliceblue;
+    border: 1px solid rgb(8, 8, 8);
+    border-radius: 4px 4px 4px 4px;
 }
 
 .container-form {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(180, 173, 173,0.8);
+    background-color: rgba(85, 82, 82, 0.9);
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     animation: aparecer 1s forwards;
+}
+
+.button-agregar {
+    width: 75px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #7B61FF;
+    color: #fff;
 }
 
 @keyframes aparecer {
@@ -38,3 +73,12 @@ input {
         opacity: 1;
     }
 }
+
+@media (max-width: 600px) {
+   
+    form {
+        width: 300px;
+        height: 250px;
+    }
+    
+  }

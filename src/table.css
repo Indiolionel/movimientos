@@ -44,6 +44,20 @@
     margin: 4px;
 }
 
+.container-button2 {
+    position: absolute;
+    margin: 10px;
+}
+
+
 h3 {
     text-align: center;
 }
+
+
+@media (max-width: 600px) {
+    .container-table {
+      flex-direction: column;
+    }
+    
+  }

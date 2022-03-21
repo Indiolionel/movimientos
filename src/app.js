@@ -17,7 +17,7 @@ function App({data}) {
         <Dashboard balance={data.balance} onclick={setshowModal}/>
         {showModal ? <Modal /> : null}
 
-        <Table items={data.items}/>
+        <Table items={data.items} onclick={setshowModal}/>
         </div>
         </>
     
