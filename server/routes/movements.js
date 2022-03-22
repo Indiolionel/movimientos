@@ -15,7 +15,7 @@ router.get('/', async (req, res, next) => {
     }
 })
 
-router.post('/', async (req, res) => {
+router.post('/', async (req, res, next) => {
     console.log(req.body)
     const {description, amount} = req.body;
     if (!description || !amount) {
@@ -39,7 +39,7 @@ router.post('/', async (req, res) => {
     };
 })
 
-router.delete('/:movementId', async (req, res) => {
+router.delete('/:movementId', async (req, res, next) => {
     const {movementId} = req.params;
     if (!movementId) {
         res.status(400).json({
@@ -59,7 +59,7 @@ router.delete('/:movementId', async (req, res) => {
 })
 
 //Update a movement
-router.patch('/:movementId', async (req, res) => {
+router.patch('/:movementId', async (req, res, next) => {
     const {movementId} = req.params;
     const {description, amount} = req.body;
     if (!movementId) {
