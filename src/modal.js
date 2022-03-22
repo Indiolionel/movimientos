@@ -1,14 +1,18 @@
 import './modal.css';
 import Data from './data'
 
-function Modal() {
+function Modal({onclose}) {
+    
+
+
     return (
         <div className='container-form' >
             
             <form id="agregar">
                 <div className='container-title'>
             <h4>NEW MOVEMENT</h4>
-            <label>X</label>
+            <h4 onClick={()=>onclose(false)}>X</h4>
+            
             </div>
                 <label className='label-input' for="service">
                     Service Name

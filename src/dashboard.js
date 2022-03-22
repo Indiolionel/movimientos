@@ -22,6 +22,7 @@ function Dashboard({balance, onclick}) {
     
     
     
+    
 )
     
 }

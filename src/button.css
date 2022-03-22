@@ -6,15 +6,18 @@
 }
 
 .container-icono1 button {
-    /* display: block; */
     border: none;
     background-color: rgb(251, 251, 251,0);
+    right: 100px;
+    bottom: 20px;
+    position: fixed;
+    
 }
 
 
 .color {
     color: #7B61FF;
-    font-size: 40px;
+    font-size: 56px;
     cursor: pointer;
     background-color: rgb(255, 255, 255,0);
 }

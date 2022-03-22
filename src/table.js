@@ -2,39 +2,38 @@ import { Fragment } from 'react';
 import './table.css';
 import Button from './button'
 
-function Table({items, onclick}) {
-  
-  const listItems = items.map(a =>{
-    const changeColor = a.amount>0 ? 'green' : 'red' ; 
+function Table({ items, onclick }) {
 
-      return (
-             <tr className={`atributte ${changeColor}`} key={a.description}>
-      <td>{a.description}</td>
-      <td>{a.amount}</td>
-      </tr>       
-          )
-  }    
-
-);
-
+  const listItems = items.map(a => {
+    const changeColor = a.amount > 0 ? 'green' : 'red';
 
     return (
-      <div className='container-table'>
-      <div className='table'>
-      
-      <h3>Last movements!</h3>
+      <tr className={`atributte ${changeColor}`} key={a.description}>
+        <td>{a.description}</td>
+        <td>{a.amount}</td>
+      </tr>
+    )
+  }
 
-          <table >
+  );
+
+
+  return (
+    <div className='container-table'>
+      <div className='table'>
+
+        <h3>Last movements!</h3>
+
+        <table >
           {listItems}
-          </table> 
-          <div className='container-button2'>
-      <Button onclick={onclick}/>  
+        </table>
+          <Button onclick={onclick} />
+        
       </div>
-      </div>
-      
-      </div> 
-)
-    
+
+    </div>
+  )
+
 }
 
 export default Table;

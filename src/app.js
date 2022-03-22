@@ -15,10 +15,11 @@ function App({data}) {
         <div className='container'>
             
         <Dashboard balance={data.balance} onclick={setshowModal}/>
-        {showModal ? <Modal /> : null}
+        {showModal ? <Modal onclose={setshowModal}/> : null}
 
         <Table items={data.items} onclick={setshowModal}/>
         </div>
+        
         </>
     
 )
