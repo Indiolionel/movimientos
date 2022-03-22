@@ -1,0 +1,88 @@
+form {
+    width: 400px;
+    /* height: 250px; */
+    background-color: rgba(245, 240, 240);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.container-title {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.label-input {
+    width: 250px;
+}
+
+.label-input  input {
+    height: 25px;
+}
+
+.container-title h4 {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+label {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+input {
+    border: 1px solid rgb(8, 8, 8);
+    border-radius: 4px 4px 4px 4px;
+}
+
+.container-form {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(85, 82, 82, 0.9);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: aparecer 1s forwards;
+    z-index:2;
+}
+
+.button-agregar {
+    width: 75px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #7B61FF;
+    color: #fff;
+    margin-top:10px;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity:0.3;
+    }
+    50% {
+        opacity:0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+   
+    form {
+        width: 300px;
+        height: 250px;
+    }
+    
+  }

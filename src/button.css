@@ -1,0 +1,31 @@
+.container-icono1 {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    display: none;
+}
+
+.container-icono1 button {
+    border: none;
+    background-color: rgb(251, 251, 251,0);
+    right: 100px;
+    bottom: 20px;
+    position: fixed;
+    
+}
+
+
+.color {
+    color: #7B61FF;
+    font-size: 56px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255,0);
+}
+
+
+@media (max-width: 600px) {
+    
+    .container-icono1 {
+        display: block;
+    }
+  }
