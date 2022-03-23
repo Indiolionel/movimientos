@@ -3,9 +3,10 @@ const dbuser = process.env.DB_USER;
 const dbpassword = process.env.DB_PASSWORD;
 const dburi = process.env.DB_URI;
 
+const baseConnectHost = process.env.SERVER ? 'mongodb+srv' : 'mongodb'
 const finalUri = !dbuser && !dbpassword
-  ? `mongodb://${dburi}`
-  : `mongodb://${dbuser}:${dbpassword}@${dburi}`;
+  ? `${baseConnectHost}://${dburi}`
+  : `${baseConnectHost}://${dbuser}:${dbpassword}@${dburi}`;
 
 // set mongoose Promise to Bluebird
 mongoose.Promise = Promise;
