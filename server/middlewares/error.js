@@ -1,4 +1,5 @@
 const httpStatus = require('http-status');
+const logger = require('../logger')
 
 const handler = (err, req, res, next) => {
   const response = {
@@ -8,7 +9,7 @@ const handler = (err, req, res, next) => {
     stack: err.stack,
   };
 
-  console.info("Error:", JSON.stringify(response))
+  logger.log('error', `Some error, responding:  ${JSON.stringify(response)}`)
   res.status(err.status);
   res.json(response);
 };
