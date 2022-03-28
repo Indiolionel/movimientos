@@ -2,9 +2,12 @@ import { Fragment } from 'react';
 import './table.css';
 import Button from './button'
 
-function Table({ items, onclick }) {
 
-  const listItems = items.map(a => {
+let url = 'http://localhost:5000/api/movements';
+
+function Table({ status }) {
+
+  const listItems = status.map(a => {
     const changeColor = a.amount > 0 ? 'green' : 'red';
 
     return (
@@ -25,9 +28,11 @@ function Table({ items, onclick }) {
         <h3>Last movements!</h3>
 
         <table >
+          <tbody>
           {listItems}
+          </tbody>
+          
         </table>
-          <Button onclick={onclick} />
         
       </div>
 

@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import data from './data.js'
+
 import App from './app'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App data={data}/>
+    <App />
     
   </React.StrictMode>,
   document.getElementById('root')

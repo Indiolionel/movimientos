@@ -4,39 +4,42 @@ import { useState } from 'react';
 import Modal from './modal'
 
 
+let url = 'http://localhost:5000/api/movements';
+
 function App() {
 
-const data = () => {
-    let url = 'http://localhost:5000/api/movements';
-    let fetchData = {
-        method: 'GET'
-    }
+    const [showModal, setshowModal] = useState(false);
+    const [datajson, setDatajson] = useState([]);
+
+
     
-    fetch(url, fetchData)
+    fetch(url)
         .then((resp) => resp.json())
         .then(function (data) {
 
-            console.log(data.data[0])
-           
+            return setDatajson(data.data);
+
         })
         .catch(function (error) {
             console.log(error);
         });
-}
 
-    const [showModal, setshowModal] = useState(false);
 
     return (
         <>
-            
             <div className='container'>
-            {data()}
+        <Dashboard status={datajson} onclick={setshowModal} />
+         {showModal ? <Modal onclose={setshowModal} /> : null}
+
+        <Table status={datajson} /> 
+
+                {/* <Dashboard status={datajson} onclick={setDatajson} /> */}
+
                 {/* <Dashboard balance={data.balance} onclick={setshowModal} />
                 {showModal ? <Modal onclose={setshowModal} /> : null}
 
                 <Table items={data.items} onclick={setshowModal} /> */}
             </div>
-
         </>
 
     )
