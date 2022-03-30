@@ -64,8 +64,12 @@ input {
     background-color: #7B61FF;
     color: #fff;
     margin-top:10px;
+    cursor: pointer;
 }
 
+.modal-x {
+    cursor: pointer;
+}
 @keyframes aparecer {
     0% {
         opacity:0.3;
