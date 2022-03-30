@@ -10,7 +10,9 @@ router.get('/', async (req, res, next) => {
         const data = await Movements.find().sort( { date: -1 } ).limit(10);
         res.status(200).json({
             state: 'success',
-            data
+            balance: data.reduce((acum,actual) => acum+actual.amount, 0),
+            data,
+
         })
     } catch (error) {
         next({status: 500, message: 'Error reading DB' , stack: error})
