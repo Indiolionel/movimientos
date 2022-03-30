@@ -19,6 +19,12 @@
         padding: 10px;
     }
 
+    .td {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;        
+        width: 90%;
+    }
 .atributte:nth-child(2n+1)
 { 
     background-color: #CDC6F8;
@@ -42,7 +48,11 @@
 }
 
 
-
+.btn-delete {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
 
 h3 {
     text-align: center;

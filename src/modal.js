@@ -7,7 +7,7 @@ const url = 'http://localhost:5000/api/movements';
 function Modal({ onclose }) {
 
 
-    const [datos, setDatos] = useState({
+    const [data, setData] = useState({
         description: '',
         amount: ''
     })
@@ -15,15 +15,14 @@ function Modal({ onclose }) {
 
 
     const handleInputChange = (e) => {
-            // console.log (e.target.value)
-            setDatos({
-                ...datos,
+            setData({
+                ...data,
                 [e.target.name] : e.target.value
             })                                                                                                                                                                                               
 
     }
 
-    const enviarDatos= async e=>{
+    const sendData= async e=>{
             e.preventDefault();
             // console.log(datos.service + ' ' + datos.amount);
            
@@ -34,7 +33,7 @@ function Modal({ onclose }) {
                         'Accept':'application/json',
                         'Content-type':'application/json'
                         },
-                        body: JSON.stringify(datos)
+                        body: JSON.stringify(data)
                                        
                 }
                 let res = await fetch(url, config);
@@ -49,7 +48,7 @@ function Modal({ onclose }) {
     return (
         
         <div className='container-form' >
-            <form id="agregar" onSubmit={enviarDatos}>
+            <form id="agregar" onSubmit={sendData}>
                 <div className='container-title'>
                     <h4>NEW MOVEMENT</h4>
                     <h4 className='modal-x' onClick={() => onclose(false)}>X</h4>
@@ -75,26 +74,7 @@ function Modal({ onclose }) {
                 </label>
                 <button onClick={useState} className='button-agregar' type="submit" value="Agregar">ADD</button>
             </form>
-            {/*         
-            <form id="agregar">
-                <div className='container-title'>
-            <h4>NEW MOVEMENT</h4>
-            <h4 className='modal-x' onClick={()=>onclose(false)}>X</h4>
-            
-            </div>
-                <label className='label-input' for="service">
-                    Service Name
-                    <input type="text" name="name" id="service"/>
-                </label>
-                <label className='label-input' for="amount">
-                    Amount
-                    <input type="text" name="name" id="amount"/>
-                </label>
-                <button onClick={miPost} className='button-agregar' type="submit" value="Agregar">ADD</button>
-            </form> */}
-
-
-        </div>
+                 </div>
         
     )
 

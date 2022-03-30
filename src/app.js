@@ -2,6 +2,7 @@ import Dashboard from './dashboard'
 import Table from './table'
 import { useState } from 'react';
 import Modal from './modal'
+import Button from './button'
 
 
 let url = 'http://localhost:5000/api/movements';
@@ -30,15 +31,8 @@ function App() {
             <div className='container'>
         <Dashboard status={datajson} onclick={setshowModal} />
          {showModal ? <Modal onclose={setshowModal} /> : null}
-
+         <Button onclick={setshowModal}/>
         <Table status={datajson} /> 
-
-                {/* <Dashboard status={datajson} onclick={setDatajson} /> */}
-
-                {/* <Dashboard balance={data.balance} onclick={setshowModal} />
-                {showModal ? <Modal onclose={setshowModal} /> : null}
-
-                <Table items={data.items} onclick={setshowModal} /> */}
             </div>
         </>
 
