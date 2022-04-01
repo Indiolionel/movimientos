@@ -10,7 +10,7 @@ import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    
+
   </React.StrictMode>,
   document.getElementById('root')
 );

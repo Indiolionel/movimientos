@@ -25,8 +25,7 @@
         justify-content: space-between;        
         width: 90%;
     }
-.atributte:nth-child(2n+1)
-{ 
+.atributte:nth-child(2n+1){ 
     background-color: #CDC6F8;
 }
 
@@ -54,6 +53,13 @@
     cursor: pointer;
 }
 
+.btn-method {
+    display: flex;
+        flex-direction: row;
+        justify-content: space-around;        
+        width: 10%;
+}
+
 h3 {
     text-align: center;
 }
@@ -64,5 +70,4 @@ h3 {
       flex-direction: column;
       width: 100%;
     }
-    
   }

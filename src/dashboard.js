@@ -3,14 +3,11 @@ import './dashboard.css';
 
 function Dashboard({ status, onclick }) {
 
-  const balance = () => {
-    let startValue = 0;
-    status.map (a => {
-      startValue = startValue+a.amount
-    })
-    return startValue;
-  }
-  
+  const balance = status.map(a => a.amount)
+  const valueInitial = 0;
+  const sumBalance = balance.reduce((a, b) => a + b, valueInitial)
+
+
 
   return (
     <div className="dashboard" >
@@ -20,9 +17,9 @@ function Dashboard({ status, onclick }) {
           <h5>BALANCE</h5>
           <div className='precio'>
             <p>$</p>
-            <p>{balance()}</p>
+            <p>{sumBalance}</p>
           </div>
-          
+
         </div>
         <button className='button-new-move' onClick={() => onclick(true)}>
           New Move

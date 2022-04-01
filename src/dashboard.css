@@ -61,12 +61,12 @@ p {
 }
 
 @media (max-width: 600px) {
-    .button-new-move {
-        display: none;
+
+.button-new-move {
+    display: none;
     }
 
-    .dashboard {
-        width: 100%;
-       
+.dashboard {
+     width: 100%;   
     }
   }

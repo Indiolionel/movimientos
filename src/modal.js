@@ -15,38 +15,38 @@ function Modal({ onclose }) {
 
 
     const handleInputChange = (e) => {
-            setData({
-                ...data,
-                [e.target.name] : e.target.value
-            })                                                                                                                                                                                               
+        setData({
+            ...data,
+            [e.target.name]: e.target.value
+        })
 
     }
 
-    const sendData= async e=>{
-            e.preventDefault();
-            // console.log(datos.service + ' ' + datos.amount);
-           
-            try {
-                let config = {
-                    method: 'POST',
-                    headers: {
-                        'Accept':'application/json',
-                        'Content-type':'application/json'
-                        },
-                        body: JSON.stringify(data)
-                                       
-                }
-                let res = await fetch(url, config);
-                let json = await res.json()
-                console.log (json)
-                onclose(false);
-            } catch (error){
+    const sendData = async e => {
+        e.preventDefault();
+        // console.log(datos.service + ' ' + datos.amount);
+
+        try {
+            let config = {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
 
             }
-    }
+            let res = await fetch(url, config);
+            let json = await res.json()
+            console.log(json)
+            onclose(false);
+        } catch (error) {
+
+        }
+        }
 
     return (
-        
+
         <div className='container-form' >
             <form id="agregar" onSubmit={sendData}>
                 <div className='container-title'>
@@ -58,7 +58,7 @@ function Modal({ onclose }) {
                     Service Name
                     <input
                         type="text"
-                        name="description" 
+                        name="description"
                         id="service"
                         onChange={handleInputChange}
                     />
@@ -74,11 +74,11 @@ function Modal({ onclose }) {
                 </label>
                 <button onClick={useState} className='button-agregar' type="submit" value="Agregar">ADD</button>
             </form>
-                 </div>
-        
+        </div>
+
     )
 
-    
+
 }
 
 export default Modal
