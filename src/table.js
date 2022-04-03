@@ -7,6 +7,7 @@ import Edit from './edit'
 let validar = 'container-edit' ;
 let amon = '' ;
 let descrip= '';
+let id = '';
 
 
 function Table({ status }) {
@@ -23,8 +24,8 @@ function Table({ status }) {
           <td>{a.amount}</td>
         </div>
         <div className='btn-method'>
-        <button onClick={() =>{validar='container-edit2'; amon=a.amount; descrip=a.description} }  className='btn-delete'><i class="fas fa-edit"></i></button>
-        <button onClick={() => { Delete(a._id) }} className='btn-delete'><i class="fa-solid fa-trash-can"></i></button>
+        <button onClick={() =>{id=a._id; validar='container-edit2'; amon=a.amount; descrip=a.description} }  className='btn-icon'><i class="fas fa-edit"></i></button>
+        <button onClick={() => { Delete(a._id) }} className='btn-icon'><i class="fa-solid fa-trash-can"></i></button>
 
         </div>
       </tr>
@@ -39,7 +40,7 @@ function Table({ status }) {
           <tbody>
             
             {listItems}
-                  <Edit valida={validar} amount={amon} description={descrip}/>
+                  <Edit ids={id} valida={validar} amount={amon} description={descrip}/>
 
           </tbody>
         </table>

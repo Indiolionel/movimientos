@@ -18,10 +18,21 @@
     margin: 5px;
 }
 
-.amount {
+.inputs {
     text-align: center;
     color: black;
     font-size: 20px;
 }
 
+.btn-register {
+    width: 100px;
+    height: 25px;
+    border:none;
+    border-radius: 6px;
+    background-color: rgb(44, 44, 50,0.6);
+    color:#fff;
+    margin:20px;
+    cursor: pointer;
+    
+}
 
