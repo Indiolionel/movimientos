@@ -44,6 +44,7 @@ function Edit({ amount, description, ids, changeModal}) {
         </div>
 
 
+
     )
 
 
