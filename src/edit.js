@@ -1,7 +1,7 @@
 import './edit.css'
 import { useState, useEffect } from 'react';
 
-function Edit({ valida, amount, description, ids }) {
+function Edit({ amount, description, ids, changeModal}) {
 
     const url = `http://localhost:5000/api/movements/`;
 
@@ -19,8 +19,7 @@ function Edit({ valida, amount, description, ids }) {
             .then(res => {
                 console.log(res);
             });
-            valida = 'container-edit';
-            console.log (valida);
+            
     }
 
     const [firstAmount, setFirstAmount] = useState();
@@ -35,12 +34,13 @@ function Edit({ valida, amount, description, ids }) {
         setFirstDescription(description);
     }, [description]);
 
-    return (
+    return ( 
 
-        <div className={valida}>
+        <div className='container-edit2'>
             <p className='inputs'>Description: <input type="text" name="nombre" value={firstDescription} onChange={e => setFirstDescription(e.target.value)} /></p>
             <p className='inputs'>Amount: <input type="text" name="nombre" value={firstAmount} onChange={e => setFirstAmount(e.target.value)} /></p>
-            <button className='btn-register' onClick={register} >Register</button>
+            <button className='btn-register' onClick={()=> {changeModal(false);register()}} >Register</button>
+            <p className='x' onClick={()=>changeModal(false)}>X</p>
         </div>
 
 

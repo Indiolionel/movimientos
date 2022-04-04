@@ -1,7 +1,3 @@
-.container-edit {
-        display: none;
-}
-
 .container-edit2 {
     width: 100%;
     height: 40px;
@@ -16,6 +12,13 @@
     width: 150px;
     height: 25px;
     margin: 5px;
+}
+
+.x {
+    text-align: start;
+    color: rgb(41, 38, 38);
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .inputs {
