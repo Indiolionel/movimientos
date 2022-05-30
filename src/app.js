@@ -13,18 +13,20 @@ function App() {
     const [datajson, setDatajson] = useState([]);
 
     
+const traerDato = async () => {
+    
+    try {
+        const tDfetch = await fetch(url);
+        const tDfetchJson = await tDfetch.json();
+        return setDatajson(tDfetchJson.data);
+    }
+    catch(err) {
+        console.log(err)
+    }
+    }
+    
+traerDato()
 
-
-    fetch(url)
-        .then((resp) => resp.json())
-        .then(function (data) {
-
-            return setDatajson(data.data);
-
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
 
 
     return (

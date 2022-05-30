@@ -24,7 +24,6 @@ function Modal({ onclose }) {
 
     const sendData = async e => {
         e.preventDefault();
-        // console.log(datos.service + ' ' + datos.amount);
 
         try {
             let config = {
@@ -40,8 +39,8 @@ function Modal({ onclose }) {
             let json = await res.json()
             console.log(json)
             onclose(false);
-        } catch (error) {
-
+        } catch (err) {
+            console.log(err)
         }
         }
 
